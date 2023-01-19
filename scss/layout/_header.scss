@@ -1,0 +1,43 @@
+@use '../utils/' as *;
+.header {
+  padding-block: rem(70);
+  background-image: url(../images/hero-bg.svg),
+    linear-gradient(42.43deg, $pale-blue 0%, $light-grayish-blue 50%);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: right;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    &:link,
+    &:visited {
+      font-size: rem(24);
+      font-weight: $bold;
+      color: $primary;
+    }
+  }
+
+  &__navigation {
+    &-list {
+      display: flex;
+      gap: rem(50);
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        font-weight: $medium;
+        color: $dark-cyan-1;
+      }
+    }
+  }
+}

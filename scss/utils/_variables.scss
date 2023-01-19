@@ -1,0 +1,23 @@
+@use 'functions' as *;
+// COLORS
+$primary: hsl(188, 21%, 36%);
+
+$soft-cyan: hsl(188, 66%, 61%);
+$dark-cyan-1: hsl(187, 17%, 49%);
+$dark-cyan-2: hsl(188, 42%, 45%);
+$bright-blue: hsl(217, 91%, 60%);
+$pale-blue: hsl(218, 100%, 89%);
+$pale-blue-white: hsl(224, 100%, 98%);
+$light-grayish-blue: hsl(216, 71%, 93%);
+
+// SHADOWS
+$shadow-primary: 0 rem(30) rem(60) rgba($bright-blue, 0.25);
+
+// FONTS
+$font-primary: 'Noto Sans', sans-serif;
+
+// FONT WEIGHTS
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;

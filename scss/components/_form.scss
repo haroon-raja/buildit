@@ -1,0 +1,42 @@
+@use '../utils/' as *;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  &__name-email {
+    @include grid-col-2;
+    gap: rem(20) !important;
+  }
+
+  &__group {
+    @include flex-column;
+    gap: rem(6);
+  }
+
+  &__label {
+    font-size: rem(14);
+    color: $dark-cyan-1;
+    align-self: start;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: rem(3);
+    padding-block: rem(10);
+    background-color: transparent;
+    border: 1px solid $primary;
+    font-size: rem(24);
+    color: inherit;
+  }
+
+  &__textarea {
+    height: rem(130);
+    resize: none;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $dark-cyan-2;
+    color: $pale-blue-white;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../utils/' as *;
+.section-social {
+  padding: rem(120) 0 rem(70);
+  background-color: $light-grayish-blue;
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    &-img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

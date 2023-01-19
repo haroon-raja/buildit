@@ -1,0 +1,34 @@
+@use '../utils/' as *;
+.section-innovative {
+  padding-block: rem(200);
+  background-color: $pale-blue-white;
+
+  &__cards {
+    @include grid-col-3;
+    padding-inline: rem(80);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    &-icon-box {
+      background-color: $dark-cyan-1;
+      align-self: start;
+      padding: rem(20);
+      box-shadow: $shadow-primary;
+      border-radius: rem(5);
+    }
+
+    &-icon {
+      width: rem(30);
+      height: rem(30);
+    }
+
+    &-text {
+      font-weight: $medium;
+      color: $dark-cyan-1;
+      line-height: rem(32);
+    }
+  }
+}

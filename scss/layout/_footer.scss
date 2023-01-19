@@ -1,0 +1,104 @@
+@use '../utils/' as *;
+.footer {
+  padding: rem(80) 0 rem(25);
+  background-color: $primary;
+  color: $pale-blue-white;
+
+  &__content {
+    @include grid-col-4;
+    justify-items: center;
+  }
+
+  &__company {
+    @include flex-column;
+    gap: rem(15);
+    &-name {
+      font-size: rem(24);
+      font-weight: $bold;
+      line-height: rem(44);
+    }
+
+    &-text {
+      font-weight: $medium;
+      line-height: rem(32);
+
+      & span {
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+
+  &__nav {
+    &--1 {
+      @include flex-column;
+      gap: rem(32);
+    }
+    &-list {
+      @include flex-column;
+      gap: rem(10);
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        line-height: rem(32);
+        color: inherit;
+        font-weight: $medium;
+      }
+    }
+
+    &-social {
+      display: flex;
+      gap: rem(20);
+
+      &-link {
+        &:link,
+        &:visited {
+          background-color: $dark-cyan-1;
+          padding: rem(10);
+          border-radius: rem(6);
+        }
+      }
+      &-icon {
+        width: rem(24);
+        height: rem(24);
+        fill: $pale-blue-white;
+      }
+    }
+  }
+
+  &__address {
+    @include flex-column;
+    font-style: normal;
+    gap: rem(10);
+    &-text {
+      font-weight: $medium;
+      line-height: rem(32);
+    }
+
+    &-contacts {
+      @include flex-column;
+      gap: rem(15);
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        color: currentColor;
+        font-weight: $medium;
+      }
+    }
+  }
+
+  &__powerby {
+    grid-column: 1 / -1;
+    font-size: rem(14);
+    & a {
+      &:link,
+      &:visited {
+        color: currentColor;
+        font-weight: $bold;
+      }
+    }
+  }
+}

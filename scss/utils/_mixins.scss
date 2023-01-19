@@ -1,0 +1,57 @@
+@use 'functions' as *;
+// FLEX
+@mixin flex {
+  display: flex;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+// GRID
+@mixin grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(60);
+}
+
+@mixin grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(70);
+}
+
+@mixin grid-col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: rem(70);
+}
+
+@mixin grid-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-v-center {
+  align-items: center;
+}
+
+@mixin grid-h-center {
+  justify-content: center;
+}

@@ -1,0 +1,66 @@
+@use '../utils/' as *;
+.section-cta {
+  padding-block: rem(200);
+  background-color: $pale-blue-white;
+
+  &__content {
+    @include grid-col-2;
+    @include grid-v-center;
+  }
+
+  &__contact {
+    @include flex-column;
+    gap: rem(30);
+    font-style: normal;
+    &-box {
+      @include flex-v-center;
+      gap: rem(40);
+    }
+
+    &-icon-box {
+      background-color: $light-grayish-blue;
+      padding: rem(20);
+      border-radius: rem(5);
+    }
+
+    &-icon {
+      width: rem(30);
+      height: rem(30);
+      fill: $primary;
+    }
+
+    &-text-box {
+      @include flex-column;
+      gap: rem(10);
+    }
+
+    &-text {
+      font-weight: $medium;
+    }
+
+    &-info {
+      font-size: rem(20);
+      font-weight: $bold;
+      color: $primary;
+      line-height: rem(27);
+      &:link,
+      &:visited {
+        font-size: rem(20);
+        font-weight: $bold;
+        color: $primary;
+        line-height: rem(27);
+      }
+    }
+  }
+
+  &__form-container {
+    background-image: linear-gradient(
+      42.43deg,
+      $pale-blue 0%,
+      $light-grayish-blue 50%
+    );
+    padding: rem(50) rem(40) rem(35);
+    box-shadow: $shadow-primary;
+    border-radius: rem(5);
+  }
+}

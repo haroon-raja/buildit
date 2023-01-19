@@ -1,0 +1,24 @@
+@use '../utils/' as *;
+.hero {
+  padding-top: rem(65);
+  @include grid-col-2;
+  @include grid-v-center;
+
+  &__text-box {
+    @include flex-column;
+    gap: rem(100);
+    &-text {
+      font-size: rem(22);
+      line-height: rem(36);
+      color: $dark-cyan-1;
+    }
+    &-buttons {
+      @include flex;
+      gap: rem(20);
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

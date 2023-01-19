@@ -1,0 +1,18 @@
+@use '../utils/' as *;
+.section-about {
+  background-color: $light-grayish-blue;
+  padding: rem(80) 0 rem(160);
+
+  &__content {
+    @include grid-col-2;
+    @include grid-v-center;
+  }
+
+  &__img-box {
+    justify-self: end;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

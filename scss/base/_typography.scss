@@ -1,0 +1,45 @@
+// FONTS
+@use '../utils' as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: $font-primary;
+  font-weight: $regular;
+  line-height: 1;
+  color: $primary;
+}
+
+// h1
+.heading-primary {
+  font-size: rem(64);
+  font-weight: $bold;
+  line-height: rem(72);
+}
+
+// h2
+.heading-secondary {
+  font-size: rem(36);
+  font-weight: $bold;
+  line-height: rem(48);
+}
+
+// h3
+.heading-tertiary {
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: rem(44);
+}
+
+// p PARAGRAPH
+.paragraph-text {
+  font-weight: $medium;
+  line-height: rem(32);
+  color: $dark-cyan-1;
+}
+
+// SECTION HEADING
+.section-heading {
+  font-weight: $medium;
+  line-height: rem(32);
+  color: $soft-cyan;
+}

@@ -1,0 +1,29 @@
+@use '../utils/' as *;
+.btn {
+  &:link,
+  &:visited,
+  & {
+    display: inline-block;
+    padding: rem(20) rem(25);
+    font-weight: $bold;
+    border-radius: rem(5);
+    cursor: pointer;
+  }
+
+  &--primary {
+    &:link,
+    &:visited {
+      background-color: $dark-cyan-2;
+      color: $pale-blue-white;
+      box-shadow: $shadow-primary;
+    }
+  }
+
+  &--secondary {
+    &:link,
+    &:visited {
+      color: $primary;
+      background-color: $pale-blue;
+    }
+  }
+}

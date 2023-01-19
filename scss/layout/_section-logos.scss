@@ -1,0 +1,12 @@
+@use '../utils/' as *;
+.section-logos {
+  padding-block: rem(50);
+  background-color: $light-grayish-blue;
+
+  &__logos {
+    @include flex-center;
+    border-block: rem(1.16) solid $dark-cyan-1;
+    padding-block: rem(40);
+    gap: rem(40);
+  }
+}

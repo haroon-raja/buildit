@@ -1,0 +1,14 @@
+@use '../utils/' as *;
+.section-featured {
+  padding-block: rem(150);
+  background-color: $pale-blue-white;
+
+  &__content {
+    @include grid-col-2;
+    @include grid-v-center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
