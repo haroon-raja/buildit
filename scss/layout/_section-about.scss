@@ -2,17 +2,39 @@
 .section-about {
   background-color: $light-grayish-blue;
   padding: rem(80) 0 rem(160);
+  @include breakpoint-desktop(large) {
+    padding: rem(50) 0 rem(120);
+  }
+
+  @include breakpoint-desktop(large) {
+    padding: rem(50) 0 rem(80);
+  }
 
   &__content {
     @include grid-col-2;
     @include grid-v-center;
+    @include breakpoint-desktop(medium) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &__img-box {
     justify-self: end;
+    @include breakpoint-desktop(medium) {
+      justify-self: center;
+    }
+  }
+
+  &__text-box {
+    @include breakpoint-desktop(medium) {
+      text-align: center;
+    }
   }
 
   &__img {
     width: 100%;
+    object-fit: cover;
+    display: block;
   }
 }

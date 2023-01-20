@@ -3,14 +3,27 @@
   padding: rem(120) 0 rem(70);
   background-color: $light-grayish-blue;
 
+  @include breakpoint-desktop(large) {
+    padding: rem(90) 0 rem(50);
+  }
+
   &__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
 
+    @include breakpoint-desktop(small) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-desktop(x-small) {
+      grid-template-columns: 1fr;
+    }
+
     &-img {
       width: 100%;
       object-fit: cover;
+      display: block;
     }
   }
 }

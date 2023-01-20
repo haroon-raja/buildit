@@ -8,5 +8,21 @@
     border-block: rem(1.16) solid $dark-cyan-1;
     padding-block: rem(40);
     gap: rem(40);
+    @include breakpoint-desktop(medium) {
+      gap: rem(20);
+    }
+
+    @include breakpoint-desktop(small) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: rem(5);
+    }
+  }
+
+  &__logo {
+    @include breakpoint-desktop(small) {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 }

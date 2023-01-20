@@ -2,15 +2,25 @@
 .section-innovative {
   padding-block: rem(200);
   background-color: $pale-blue-white;
-
+  @include breakpoint-desktop(large) {
+    padding-block: rem(120);
+  }
+  @include breakpoint-desktop(medium) {
+    padding-block: rem(80);
+  }
   &__cards {
     @include grid-col-3;
-    padding-inline: rem(80);
+    @include breakpoint-desktop(medium) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &__card {
     display: flex;
     flex-direction: column;
+    @include breakpoint-desktop(medium) {
+    }
 
     &-icon-box {
       background-color: $dark-cyan-1;

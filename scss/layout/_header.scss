@@ -7,6 +7,18 @@
   background-size: auto;
   background-position-x: right;
 
+  @include breakpoint-desktop(medium) {
+    padding-block: rem(50);
+  }
+
+  @include breakpoint-desktop(small) {
+    background-image: linear-gradient(
+      42.43deg,
+      $pale-blue 0%,
+      $light-grayish-blue 50%
+    );
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -30,6 +42,26 @@
     &-list {
       display: flex;
       gap: rem(50);
+      transition: all 0.3s ease-in;
+
+      @include breakpoint-desktop(tab) {
+        position: fixed;
+        z-index: 10;
+        inset: 0 0 0 30%;
+        background-color: $pale-blue;
+        flex-direction: column;
+        padding: rem(140) rem(30);
+        gap: rem(40);
+        height: 100vh;
+        align-items: start;
+        transform: translateX(100%);
+        visibility: hidden;
+
+        &[data-visible='true'] {
+          transform: translateX(0);
+          visibility: visible;
+        }
+      }
     }
 
     &-link {
@@ -39,5 +71,33 @@
         color: $dark-cyan-1;
       }
     }
+
+    &-cta {
+      @include breakpoint-desktop(tab) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.overlay {
+  @include breakpoint-desktop(tab) {
+    background-color: rgba($primary, 0.5);
+    backdrop-filter: blur(10px);
+    inset: 0 0;
+    position: fixed;
+    height: 100vh;
+    z-index: 5;
   }
 }

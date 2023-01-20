@@ -4,14 +4,34 @@
   background-color: $primary;
   color: $pale-blue-white;
 
+  @include breakpoint-desktop(large) {
+    padding-top: rem(60);
+  }
+
   &__content {
     @include grid-col-4;
     justify-items: center;
+
+    @include breakpoint-desktop(medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: rem(30);
+      justify-items: start;
+    }
+
+    @include breakpoint-desktop(small) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: rem(70);
+    }
   }
 
   &__company {
     @include flex-column;
     gap: rem(15);
+
+    @include breakpoint-desktop(small) {
+      align-items: center;
+    }
     &-name {
       font-size: rem(24);
       font-weight: $bold;
@@ -21,6 +41,9 @@
     &-text {
       font-weight: $medium;
       line-height: rem(32);
+      @include breakpoint-desktop(medium) {
+        margin: 0;
+      }
 
       & span {
         border-bottom: 1px solid currentColor;
@@ -32,6 +55,10 @@
     &--1 {
       @include flex-column;
       gap: rem(32);
+
+      @include breakpoint-desktop(small) {
+        align-items: center;
+      }
     }
     &-list {
       @include flex-column;
@@ -71,6 +98,10 @@
     @include flex-column;
     font-style: normal;
     gap: rem(10);
+
+    @include breakpoint-desktop(small) {
+      align-items: center;
+    }
     &-text {
       font-weight: $medium;
       line-height: rem(32);
@@ -93,6 +124,9 @@
   &__powerby {
     grid-column: 1 / -1;
     font-size: rem(14);
+    @include breakpoint-desktop(medium) {
+      justify-self: center;
+    }
     & a {
       &:link,
       &:visited {

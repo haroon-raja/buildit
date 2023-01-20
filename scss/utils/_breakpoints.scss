@@ -1,8 +1,28 @@
 @use 'functions' as *;
 
 @mixin breakpoint-desktop($breakpoint) {
+  @if $breakpoint == large {
+    @media screen and (max-width: em(900)) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media screen and (max-width: em(800)) {
+      @content;
+    }
+  }
   @if $breakpoint == small {
-    @media screen and (max-width: em(560)) {
+    @media screen and (max-width: em(600)) {
+      @content;
+    }
+  }
+  @if $breakpoint == x-small {
+    @media screen and (max-width: em(450)) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab {
+    @media screen and (max-width: em(768)) {
       @content;
     }
   }

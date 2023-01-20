@@ -11,21 +11,24 @@ body {
 
 // h1
 .heading-primary {
-  font-size: rem(64);
+  font-size: rem(36);
+  font-size: clamp(rem(36), rem(24.5) + 3.294117647058823vw, rem(64));
   font-weight: $bold;
-  line-height: rem(72);
+  line-height: clamp(rem(44), rem(32.5) + 3.294117647058823vw, rem(72));
 }
 
 // h2
 .heading-secondary {
-  font-size: rem(36);
+  font-size: rem(30);
+  font-size: clamp(rem(30), rem(27.5) + 0.7058823529411764vw, rem(36));
   font-weight: $bold;
   line-height: rem(48);
 }
 
 // h3
 .heading-tertiary {
-  font-size: rem(24);
+  font-size: rem(20);
+  font-size: clamp(rem(20), rem(18.35) + 0.4705882352941176vw, rem(24));
   font-weight: $bold;
   line-height: rem(44);
 }

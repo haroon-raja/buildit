@@ -1,4 +1,5 @@
 @use 'functions' as *;
+@use 'breakpoints' as *;
 // FLEX
 @mixin flex {
   display: flex;
@@ -29,18 +30,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: rem(60);
+
+  @include breakpoint-desktop(large) {
+    gap: rem(40);
+  }
 }
 
 @mixin grid-col-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: rem(70);
+
+  @include breakpoint-desktop(large) {
+    gap: rem(40);
+  }
 }
 
 @mixin grid-col-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: rem(70);
+
+  @include breakpoint-desktop(large) {
+    gap: rem(40);
+  }
 }
 
 @mixin grid-center {

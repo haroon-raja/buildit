@@ -28,6 +28,6 @@ ul {
 }
 
 .container {
-  max-width: rem(1200);
+  max-width: min(calc(100% - rem(40)), rem(1200));
   margin-inline: auto;
 }

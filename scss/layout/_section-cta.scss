@@ -3,9 +3,20 @@
   padding-block: rem(200);
   background-color: $pale-blue-white;
 
+  @include breakpoint-desktop(large) {
+    padding-block: rem(120);
+  }
+
+  @include breakpoint-desktop(medium) {
+    padding-block: rem(80);
+  }
+
   &__content {
     @include grid-col-2;
     @include grid-v-center;
+    @include breakpoint-desktop(medium) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__contact {
@@ -62,5 +73,9 @@
     padding: rem(50) rem(40) rem(35);
     box-shadow: $shadow-primary;
     border-radius: rem(5);
+
+    @include breakpoint-desktop(x-small) {
+      padding-inline: 0;
+    }
   }
 }

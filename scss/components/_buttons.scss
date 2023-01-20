@@ -27,3 +27,27 @@
     }
   }
 }
+
+// NAV TOGGLE
+.nav-toggle {
+  display: none;
+  @include breakpoint-desktop(tab) {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: rem(60);
+    right: rem(32);
+    border: none;
+    width: rem(32);
+    aspect-ratio: 1;
+    background-image: url(../images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+
+    &[aria-expanded='true'] {
+      background-image: url(../images/icon-menu-close.svg);
+      position: fixed;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @use 'functions' as *;
 // COLORS
-$primary: hsl(188, 21%, 36%);
+$primary: #496a6f;
 
 $soft-cyan: hsl(188, 66%, 61%);
 $dark-cyan-1: hsl(187, 17%, 49%);
@@ -9,6 +9,7 @@ $bright-blue: hsl(217, 91%, 60%);
 $pale-blue: hsl(218, 100%, 89%);
 $pale-blue-white: hsl(224, 100%, 98%);
 $light-grayish-blue: hsl(216, 71%, 93%);
+$black: hsl(0, 0%, 0%);
 
 // SHADOWS
 $shadow-primary: 0 rem(30) rem(60) rgba($bright-blue, 0.25);

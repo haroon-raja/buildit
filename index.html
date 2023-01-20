@@ -24,14 +24,27 @@
           />
           <span class="header__logo-text">Buildit</span>
         </a>
+        <button
+          type="menu"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
+          <span class="sr-only">MENU</span>
+        </button>
         <nav class="header__navigation">
-          <ul class="header__navigation-list">
+          <ul
+            id="header-navigation"
+            data-visible="false"
+            class="header__navigation-list"
+          >
             <li><a href="#" class="header__navigation-link">About</a></li>
             <li><a href="#" class="header__navigation-link">Services</a></li>
             <li><a href="#" class="header__navigation-link">Projects</a></li>
             <li><a href="#" class="header__navigation-link">Contact</a></li>
           </ul>
         </nav>
+        <div class="overlay hidden"></div>
         <a href="#" class="header__navigation-cta btn btn--primary u-pb-10"
           >Need a project?</a
         >
@@ -54,7 +67,51 @@
           </div>
         </div>
         <div class="hero__img-box">
-          <img src="images/hero-img.png" alt="" class="hero__img" />
+          <figure class="hero__img--1">
+            <img
+              src="images/hero-img-1.png"
+              alt="white color house with trees and lawn"
+              width="162"
+              height="160"
+              class="hero__img"
+            />
+          </figure>
+          <figure class="hero__img--2">
+            <img
+              src="images/hero-img-2.png"
+              alt="A building with glass build and sky"
+              width="251"
+              height="249"
+              class="hero__img"
+            />
+          </figure>
+          <figure class="hero__img--3">
+            <img
+              src="images/hero-img-3.png"
+              alt="House with front lawn"
+              width="130"
+              height="129"
+              class="hero__img"
+            />
+          </figure>
+          <figure class="hero__img--4">
+            <img
+              src="images/hero-img-4.png"
+              alt="Buildings and cars on the road"
+              width="343"
+              height="343"
+              class="hero__img"
+            />
+          </figure>
+          <figure class="hero__img--5">
+            <img
+              src="images/hero-img-5.png"
+              alt="A house with swimming pool"
+              width="210"
+              height="210"
+              class="hero__img"
+            />
+          </figure>
         </div>
       </div>
       <!-- SECTION HERO END -->
@@ -160,7 +217,7 @@
           <div class="section-about__img-box">
             <img
               src="images/about-img.png"
-              alt="Glass Built building"
+              alt="Glass Built building and sky"
               class="section-about__img"
               width="500"
               height="376"
@@ -205,6 +262,8 @@
             <img
               src="images/featured-images.png"
               alt="Four Houses and a house with construction and a crane"
+              width="503"
+              height="587"
               class="section-featured__img"
             />
           </div>
@@ -441,5 +500,7 @@
       </div>
     </footer>
     <!-- FOOTER END -->
+
+    <script src="js/main.js"></script>
   </body>
 </html>

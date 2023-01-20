@@ -4,8 +4,25 @@
   flex-direction: column;
   gap: rem(30);
   &__name-email {
-    @include grid-col-2;
-    gap: rem(20) !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20);
+
+    @include breakpoint-desktop(large) {
+      @include flex-column;
+      gap: rem(30);
+    }
+
+    @include breakpoint-desktop(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(20);
+    }
+
+    @include breakpoint-desktop(small) {
+      @include flex-column;
+      gap: rem(30);
+    }
   }
 
   &__group {
