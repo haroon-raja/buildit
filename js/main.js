@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 const navToggle = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('.header__navigation-list');
 const overlay = document.querySelector('.overlay');
